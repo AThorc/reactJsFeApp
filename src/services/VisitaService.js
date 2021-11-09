@@ -7,7 +7,7 @@ const getAll = () => {
 */
 
 const getAllByUserId = userid => {
-  return http.get(`/visitas/${userid}`);
+  return http.get(`/visitas?userid=${userid}`);
 };
 
 const get = id => {

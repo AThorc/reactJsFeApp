@@ -14,6 +14,7 @@ const VisitasList = () => {
 
 
   useEffect(() => {
+    var user = AuthService.getCurrentUser();
     if (user) {
       retrieveVisitas(user.id);
     }
@@ -24,8 +25,8 @@ const VisitasList = () => {
     setSearchLuogo(searchLuogo);
   };
 
-  const retrieveVisitas = (userid) => {
-    VisitaDataService.getAllByUserId(userid)
+  const retrieveVisitas = (searchUserid) => {
+    VisitaDataService.getAllByUserId(searchUserid)
       .then(response => {
         setVisitas(response.data);
         console.log(response.data);
