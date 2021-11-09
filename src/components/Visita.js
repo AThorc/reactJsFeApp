@@ -6,7 +6,9 @@ const Visita = props => {
     id: null,
     luogo: "",
     data_avvio: "",
-    data_scadenza: ""
+    data_scadenza: "",
+    nomePaziente: "",
+    cognomePaziente: ""
   };
   const [currentVisita, setCurrentVisita] = useState(initialVisitaState);
   const [message, setMessage] = useState("");
@@ -110,7 +112,31 @@ const Visita = props => {
                 className="form-control"
                 id="data_scadenza"
                 name="data_scadenza"
-                value={currentVisita.scadenza}
+                value={currentVisita.data_scadenza}
+                onChange={handleInputChange}
+              />
+            </div>
+
+            <div className="form-group">
+            <label htmlFor="nomePaziente">Nome paziente</label>
+              <input
+                type="text"
+                className="form-control"
+                id="nomePaziente"
+                name="nomePaziente"
+                value={currentVisita.nomePaziente}
+                onChange={handleInputChange}
+              />
+            </div>
+
+            <div className="form-group">
+            <label htmlFor="data_scadenza">Cognome paziente</label>
+              <input
+                type="text"
+                className="form-control"
+                id="cognomePaziente"
+                name="cognomePaziente"
+                value={currentVisita.cognomePaziente}
                 onChange={handleInputChange}
               />
             </div>

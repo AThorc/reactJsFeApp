@@ -140,6 +140,18 @@ const VisitasList = () => {
               </label>{" "}
               {currentVisita.data_scadenza}
             </div>
+            <div>
+              <label>
+                <strong>Nome paziente:</strong>
+              </label>{" "}
+              {currentVisita.nomePaziente}
+            </div>
+            <div>
+              <label>
+                <strong>Cognome paziente:</strong>
+              </label>{" "}
+              {currentVisita.cognomePaziente}
+            </div>
 
             <Link
               to={"/visitas/" + currentVisita.id}
