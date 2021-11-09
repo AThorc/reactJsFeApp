@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import VisitaDataService from "../services/VisitaService";
 
+import moment from 'moment'
+
 const Visita = props => {
   const initialVisitaState = {
     id: null,
@@ -100,7 +102,7 @@ const Visita = props => {
                 className="form-control"
                 id="data_avvio"
                 name="data_avvio"
-                value={currentVisita.data_avvio}
+                value={moment(currentVisita.data_avvio).format('YYYY-MM-DD')}
                 onChange={handleInputChange}
               />
             </div>
@@ -112,7 +114,7 @@ const Visita = props => {
                 className="form-control"
                 id="data_scadenza"
                 name="data_scadenza"
-                value={currentVisita.data_scadenza}
+                value={moment(currentVisita.data_scadenza).format('YYYY-MM-DD')}
                 onChange={handleInputChange}
               />
             </div>
