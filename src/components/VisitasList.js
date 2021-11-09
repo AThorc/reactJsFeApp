@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import VisitaDataService from "../services/VisitaService";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 import AuthService from "../services/auth.service";
 
@@ -12,6 +12,7 @@ const VisitasList = () => {
   
   const user = AuthService.getCurrentUser();
 
+  const history = useHistory();
 
   useEffect(() => {
     var user = AuthService.getCurrentUser();
@@ -35,6 +36,10 @@ const VisitasList = () => {
         console.log(e);
       });
   };
+
+  function handleCreaVisitaClick() {
+    history.push("/add");
+  }
 
   /*
   const refreshList = () => {
@@ -91,6 +96,13 @@ const VisitasList = () => {
               onClick={() => findByLuogo(user.id, searchLuogo)}
             >
               Search
+            </button>
+            <button
+              className="btn btn-success float-right"
+              type="button"
+              onClick={handleCreaVisitaClick}
+            >
+              Crea Visita
             </button>
           </div>
         </div>
