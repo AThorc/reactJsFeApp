@@ -96,7 +96,7 @@ const Visita = props => {
             <div className="form-group">
               <label htmlFor="data_avvio">Data avvio</label>
               <input
-                type="text"
+                type="date"
                 className="form-control"
                 id="data_avvio"
                 name="data_avvio"
@@ -108,7 +108,7 @@ const Visita = props => {
             <div className="form-group">
             <label htmlFor="data_scadenza">Data scadenza</label>
               <input
-                type="text"
+                type="date"
                 className="form-control"
                 id="data_scadenza"
                 name="data_scadenza"
@@ -158,7 +158,7 @@ const Visita = props => {
             </button>
           )}
 
-          <button className="badge badge-danger mr-2" onClick={deleteVisita}>
+          <button className="badge badge-danger mr-2" onClick={false}>
             Delete
           </button>
 
