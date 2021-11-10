@@ -16,7 +16,8 @@ import Register from "./components/register.component";
 import Home from "./components/home.component";
 import Profile from "./components/profile.component";
 //import BoardUser from "./components/board-user.component";
-import BoardUser from "./components/VisitasList";
+//import BoardUser from "./components/VisitasList";
+import BoardUser from "./components/ClientesList";
 import BoardModerator from "./components/board-moderator.component";
 import BoardAdmin from "./components/board-admin.component";
 
@@ -59,7 +60,7 @@ class App extends Component {
       <div>
         <nav className="navbar navbar-expand navbar-dark bg-dark">
           <Link to={"/"} className="navbar-brand">
-            ThorcReactApp
+            Multifinance
           </Link>
           <div className="navbar-nav mr-auto">
             <li className="nav-item">
